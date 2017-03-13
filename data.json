@@ -9,7 +9,8 @@
         "title": "Clear paper jam",
         "project": "Office Chores",
         "elapsed": 1273998,
-        "id": "a73c1d19-f32d-4aff-b470-cea4e792406a"
+        "id": "a73c1d19-f32d-4aff-b470-cea4e792406a",
+        "runningSince": null
     },
     {
         "title": "Ponder origins of universe",
@@ -17,5 +18,12 @@
         "id": "2c43306e-5b44-4ff8-8753-33c35adbd06f",
         "elapsed": 11750,
         "runningSince": 1456225941911
+    },
+    {
+        "title": "Burn baby burn!",
+        "project": "Disco inferno!",
+        "id": 1234689,
+        "elapsed": 0,
+        "runningSince": null
     }
 ]
