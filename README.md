@@ -16,5 +16,5 @@
   ```
   npm start
   
-  #=> server is now running at localhost:3000
+  //server is now running at localhost:3000
   ```
