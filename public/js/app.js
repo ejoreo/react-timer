@@ -208,7 +208,7 @@ class EditableTimer extends React.Component {
           project={this.props.project}
           elapsed={this.props.elapsed}
           runningSince={this.props.runningSince}
-          onEditClick={this.props.onEditClick}
+          onEditClick={this.handleEditClick}
           onTrashClick={this.props.onTrashClick}
           onStartClick={this.props.onStartClick}
           onStopClick={this.props.onStopClick}
@@ -389,7 +389,7 @@ class Timer extends React.Component {
           <div className='extra content'>
             <span 
               className='right floated edit icon'
-              onClick={this.props.handleEditClick}
+              onClick={this.handleEditClick}
             >
               <i className='edit icon' />
             </span>
