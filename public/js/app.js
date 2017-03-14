@@ -79,9 +79,15 @@ class TimersDashboard extends React.Component {
   };
 
   deleteTimer = (timerID) => {
+    //deleting it locally
     this.setState({
       timers: this.state.timers.filter(t => t.id !== timerID)
     });
+
+    //deleting it from the client
+    client.deleteTimer(
+      { id: timerID }
+    );
   }; 
 
   createTimer = (timer) => {
@@ -89,6 +95,8 @@ class TimersDashboard extends React.Component {
     this.setState({
       timers: this.state.timers.concat(t),
     });
+
+    client.createTimer(t);
   };
 
   updateTimer = (attrs) => {
@@ -104,6 +112,8 @@ class TimersDashboard extends React.Component {
         }
       }), 
     });
+
+    client.updateTimer(attrs);
   };
 
   render() {
@@ -198,7 +208,7 @@ class EditableTimer extends React.Component {
           project={this.props.project}
           elapsed={this.props.elapsed}
           runningSince={this.props.runningSince}
-          onEditClick={this.props.onEditClick}
+          onEditClick={this.handleEditClick}
           onTrashClick={this.props.onTrashClick}
           onStartClick={this.props.onStartClick}
           onStopClick={this.props.onStopClick}
@@ -379,7 +389,7 @@ class Timer extends React.Component {
           <div className='extra content'>
             <span 
               className='right floated edit icon'
-              onClick={this.props.handleEditClick}
+              onClick={this.handleEditClick}
             >
               <i className='edit icon' />
             </span>
