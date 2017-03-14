@@ -2,16 +2,16 @@
 
 ### Running the app
 
-1.Ensure you have `npm` installed.
+* Ensure you have `npm` installed.
 
   * Follow the instructions for your platform [here](https://github.com/npm/npm).
 
-2.Install all dependencies:
+* Install all dependencies:
 
   ```
   npm install
   ```
-3. Boot the HTTP server
+* Boot the HTTP server
 
   ```
   npm start
