@@ -1,7 +1,13 @@
 body {
-  background-image: url('./images/foggy_mountain.jpg');
-  background-size: 1600px 1000px;
+  background-color: black;
+  background-image: url('./images/red_green_yello_splash.jpg');
+  background-size: 600px 600px;
+  background-position: right bottom;
   background-repeat: no-repeat;
+}
+
+h2 {
+  color: green;
 }
 
 #main {
@@ -10,4 +16,37 @@ body {
 
 #content {
   margin-top: 3em;
+}
+
+.button {
+  padding: 1px;
+}
+
+.ui.centered.card {
+  background-color: black;
+  box-shadow: none;
+}
+
+.ui.form .field > label {
+  color: green;
+}
+
+.ui.card > .content > .header{
+  color: white;
+}
+
+.ui.card > .content > .meta {
+  color: white;
+}
+
+.edit {
+  color: yellow;
+}
+
+.trash {
+  color: red;
+}
+
+.plus {
+  opacity: .00;
 }

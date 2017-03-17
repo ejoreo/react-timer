@@ -104,7 +104,7 @@ class TimersDashboard extends React.Component {
       timers: this.state.timers.map((timer) => {
         if (timer.id === attrs.id) {
           return Object.assign({}, timer, {
-            title: attrs.title,
+            exercise: attrs.exercise,
             project: attrs.project,
           });
         } else {
@@ -142,7 +142,7 @@ class EditableTimerList extends React.Component {
       <EditableTimer 
         key={timer.id}
         id={timer.id}
-        title={timer.title}
+        exer={timer.exer}
         project={timer.project}
         elapsed={timer.elapsed}
         runningSince={timer.runningSince}
@@ -194,7 +194,7 @@ class EditableTimer extends React.Component {
       return (
         <TimerForm
           id={this.props.id}
-          title={this.props.title}
+          exerci={this.props.exerci}
           project={this.props.project}
           onFormSubmit={this.handleSubmit}
           onFormClose={this.handleFormClose}
@@ -204,7 +204,7 @@ class EditableTimer extends React.Component {
       return (
         <Timer
           id={this.props.id}
-          title={this.props.title}
+          exerci={this.props.exerci}
           project={this.props.project}
           elapsed={this.props.elapsed}
           runningSince={this.props.runningSince}
@@ -225,13 +225,13 @@ class TimerForm extends React.Component {
 
     //each of these propertoes correspond to an input field that TimerForm manages
     this.state = {
-      title: this.props.title || '',
+      ex: this.props.ex || '',
       project: this.props.project || ''
     };
   }
 
-  handleTitleChange = (e) => {
-    this.setState({ title: e.target.value });
+  handleWorkoutChange = (e) => {
+    this.setState({ ex: e.target.value });
   };
 
   handleProjectChange = (e) => {
@@ -245,7 +245,7 @@ class TimerForm extends React.Component {
   handleSubmit = () => {
     this.props.onFormSubmit({
       id: this.props.id,
-      title: this.state.title,
+      ex: this.state.ex,
       project: this.state.project,
     }); 
   };
@@ -253,17 +253,18 @@ class TimerForm extends React.Component {
   render() {
     const submitText = this.props.id ? 'Update' : 'Create';
     // condition ? expression1 : expression2 = ternary operator
-    //if there is a title prop, show 'Update' button, else show 'Create' button
+    //if there is a e prop, show 'Update' button, else show 'Create' button
     return (
       <div className='ui centered card'>
         <div className='content'>
           <div className='ui form'>
             <div className='field'>
-              <label>Title</label>
+              <label>Workout</label>
               <input 
                 type='text' 
-                value={this.state.title} 
-                onChange={this.handleTitleChange}
+                value={this.state.exercise
+   } 
+                onChange={this.handleWorkoutChange}
               />
             </div>
             <div className='field'>
@@ -276,7 +277,7 @@ class TimerForm extends React.Component {
             </div>
             <div className='ui two bottom attached buttons'>
               <button 
-                className='ui basic blue button'
+                className='ui basic green button'
                 onClick={this.handleSubmit}
               >
                 {submitText}
@@ -376,7 +377,7 @@ class Timer extends React.Component {
       <div className='ui centered card'>
         <div className='content'>
           <div className='header'>
-            {this.props.title}
+            {this.props.exercise}
           </div>
           <div className='meta'>
             {this.props.project}

@@ -1,8 +1,8 @@
 window.helpers = (function () {
   function newTimer(attrs = {}) {
     const timer = {
-      title: attrs.title || 'Timer',
-      project: attrs.project || 'Project',
+      workout: attrs.workout || 'Workout',
+      exercise: attrs.exercise || 'Exercise',
       id: uuid.v4(), // eslint-disable-line no-undef
       elapsed: 0,
     };
