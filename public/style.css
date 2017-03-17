@@ -1,3 +1,9 @@
+body {
+  background-image: url('./images/foggy_mountain.jpg');
+  background-size: 1600px 1000px;
+  background-repeat: no-repeat;
+}
+
 #main {
   margin-top: 6em;
 }
