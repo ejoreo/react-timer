@@ -53,6 +53,11 @@ h2 {
   box-shadow: 0px 0px 0px 1px #ffff00 inset, 0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset;
 }
 
+.ui.dividing.header {
+  border-bottom: none;
+  color: white;
+}
+
 .edit {
   color: yellow;
 }
