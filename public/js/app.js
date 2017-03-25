@@ -259,7 +259,7 @@ class TimerForm extends React.Component {
         <div className='content'>
           <div className='ui form'>
             <div className='field'>
-              <label>Title</label>
+              <label>Exercise</label>
               <input 
                 type='text' 
                 value={this.state.title} 
@@ -267,7 +267,7 @@ class TimerForm extends React.Component {
               />
             </div>
             <div className='field'>
-              <label>Project</label>
+              <label>Description</label>
               <input 
                 type='text' 
                 value={this.state.project} 
@@ -276,7 +276,7 @@ class TimerForm extends React.Component {
             </div>
             <div className='ui two bottom attached buttons'>
               <button 
-                className='ui basic blue button'
+                className='ui basic green button'
                 onClick={this.handleSubmit}
               >
                 {submitText}
