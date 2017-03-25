@@ -382,7 +382,7 @@ class Timer extends React.Component {
             {this.props.project}
           </div>
           <div className='center aligned description'>
-            <h2 className="animate-me">
+            <h2>
               {elapsedString}
             </h2>
           </div>
